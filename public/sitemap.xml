@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://lxgr-linux.github.io/blog/</loc>
     <lastmod>2022-05-06T13:53:03+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/pokete_1/</loc>
+    <loc>https://lxgr-linux.github.io/blog/posts/pokete_1/</loc>
     <lastmod>2022-05-06T13:53:03+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://lxgr-linux.github.io/blog/posts/</loc>
     <lastmod>2022-05-06T13:53:03+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://lxgr-linux.github.io/blog/categories/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://lxgr-linux.github.io/blog/tags/</loc>
   </url>
 </urlset>

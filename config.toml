@@ -17,7 +17,7 @@ weight = 0
 [params]
 author = "lxgr-linux"
 email = "lxgr@protonmail.com"
-avatar = "/images/me.png"
+avatar = "assets/images/me.png"
 description = ""
 dateFormat = "2006-01-02"
 paginationSinglePost = true
