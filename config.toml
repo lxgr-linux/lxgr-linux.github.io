@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://lxgr-linux.github.io/blog/'
 languageCode = 'en-us'
 title = 'Lxgrs Blog'
 theme = 'anubis'
