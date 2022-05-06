@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Lxgrs Blog</title><link>https://lxgr-linux.github.io/blog/posts/</link><description>Lxgrs Blog (Posts)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 06 May 2022 13:53:03 +0200</lastBuildDate><atom:link href="https://lxgr-linux.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>The development status of Pokete</title><link>https://lxgr-linux.github.io/blog/posts/pokete_1/</link><pubDate>Fri, 06 May 2022 13:53:03 +0200</pubDate><guid>https://lxgr-linux.github.io/blog/posts/pokete_1/</guid><description>&lt;p>Soon the next bigger version (0.7.0) of &lt;code>Pokete&lt;/code> will be released, but what new features will this bring and why the last bigger update has in 2021?
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Lxgrs Blog</title><link>https://lxgr-linux.github.io/blog/posts/</link><description>Lxgrs Blog (Posts)</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 06 May 2022 13:53:03 +0200</lastBuildDate><atom:link href="https://lxgr-linux.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>The development status of Pokete</title><link>https://lxgr-linux.github.io/blog/posts/pokete_1/</link><pubDate>Fri, 06 May 2022 13:53:03 +0200</pubDate><guid>https://lxgr-linux.github.io/blog/posts/pokete_1/</guid><description>&lt;p>Soon the next bigger version (0.7.0) of &lt;a href="https://github.com/lxgr-linux/pokete">&lt;code>Pokete&lt;/code>&lt;/a> will be released, but what new features will this bring?
 This is a more in depth Changelog.&lt;/p>
 &lt;h2 id="under-the-hood" >Under the hood
 &lt;span>
@@ -226,4 +226,12 @@ Also a big Ascii clock was added to keep track of time.&lt;/p>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>This also varies by a grade what&amp;rsquo;s either 1 or 2 and which potentiate the factors with them selves.&lt;/p></description></item></channel></rss>
+&lt;p>This also varies by a grade what&amp;rsquo;s either 1 or 2 and which potentiate the factors.&lt;/p>
+&lt;h2 id="thanks" >Thanks
+&lt;span>
+&lt;a href="#thanks">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>Thanks to everybody who liked my socialmedia posts and stared my github repository.
+But special thanks go to MaFeLP for helping, reviewing the code and being patient with me.&lt;/p></description></item></channel></rss>
