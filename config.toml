@@ -47,8 +47,8 @@ graphcommentId = ""
 #  avatar-bg = "#f0f0f0"
 
   [params.webmentions]
-  url = "https://yourdomain.com/webemntions/receive"
-  login = "hugo-theme-anubis"
+  #url = "https://webmention.io/lxgr-linux.github.io_blog_/webmention"
+  login = "lxgr-linux.github.io_blog_"
   pingback = true
 
   [[params.social]]
