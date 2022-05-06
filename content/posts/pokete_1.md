@@ -30,7 +30,7 @@ Also when a Pokete dies in a fight, the fight isn't instantly lost, but the play
 NPCs are now way smarter and are now able to walk to certain areas of the map, regardless is which direction, also [multi-answer](https://github.com/lxgr-linux/pokete/pull/105) chats with NPCs are now passible, so that the player now is able to choose from some answers to give a NPC in a conversation, and depending on this the reactions of the NPCs vary.
 All of the above also enables the addition of a storyline to the game, so that the player may get an antagonist or enemies in later releases.
 
-![ChitChat](pokete_1/chitchat.png)
+![ChitChat](chitchat.png)
 
 ### Achievements
 A very cool new feature that really enhances the playing experience is the addition of achievements. Now achievements for certain actions, like the first fight or the first caught Pokete, are rewarded with an achievement. Therefore also an achievement overview in the menu has been added. 
@@ -61,37 +61,37 @@ Copyright (c) lxgr-linux <lxgr-linux@protonmail.com> 2022
 Newly added Poketes include
 - [Voglus](https://github.com/lxgr-linux/pokete/blob/master/wiki.md#voglus), the evolvement of Voglo.
 
-![Voglus](pokete_1/voglus.png)
+![Voglus](voglus.png)
 
 - [Ratatat](https://github.com/lxgr-linux/pokete/blob/master/wiki.md#ratatat), the evolvement of Rato.
 
-![Ratatat](pokete_1/ratatat.png)
+![Ratatat](ratatat.png)
 
 - [Crabbat](https://github.com/lxgr-linux/pokete/blob/master/wiki.md#crabbat), which evolves from Clampi and to the also newly added [Rustacean](https://github.com/lxgr-linux/pokete/blob/master/wiki.md#rustacean), which I added because of my love to the Rust programming language.
 
-![Crabbat](pokete_1/crabbat.png)
+![Crabbat](crabbat.png)
 
-![Rustacean](pokete_1/rustacean.png)
+![Rustacean](rustacean.png)
 
 - [Saugh](https://github.com/lxgr-linux/pokete/blob/master/wiki.md#saugh), an overpowered sand ghost that will definitely be nerfed later.
 
-![Saugh](pokete_1/saugh.png)
+![Saugh](saugh.png)
 
 - [Corcos](https://github.com/lxgr-linux/pokete/blob/master/wiki.md#corcos-day)
 
-![Corcos](pokete_1/corcos_1.png)
+![Corcos](corcos_1.png)
 
-![Corcos](pokete_1/corcos_2.png)
+![Corcos](corcos_2.png)
 
 - [Raupathor](https://github.com/lxgr-linux/pokete/blob/master/wiki.md#raupathor-day)
 
-![Raupathor](pokete_1/raupathor_1.png)
+![Raupathor](raupathor_1.png)
 
-![Raupathor](pokete_1/raupathor_2.png)
+![Raupathor](raupathor_2.png)
 
 - [Mothor](https://github.com/lxgr-linux/pokete/blob/master/wiki.md#mothor) (more [info](#time))
 
-![Mothor](pokete_1/mothor.png)
+![Mothor](mothor.png)
 
 ### Maps
 Ofcourse one of the highlights of a new release are the new maps. This release just two new maps have been added, but one of which is the most feature rich of them all.
@@ -99,7 +99,7 @@ Also most of the buildings like arenas or Pokete-Center and Shops now have signs
 
 The first new map is [sunny beach](https://github.com/lxgr-linux/pokete/pull/107) where the newly added weather first came into play. It's located in the north of Rockville is the place where the new Crabbat, Rustacean and Saugh can be found.
 
-![Sunny beach](pokete_1/sunnybeach.png)
+![Sunny beach](sunnybeach.png)
 
 But the biggest addition is the city of [Agrawos](https://github.com/lxgr-linux/pokete/pull/120) and being the biggest city in the game to far. It features the MowCow-Burger restaurant with a sidequest, the temple of the Wheeto, many NPCs, an arena, a town hall and many items to find. Also a new legendary old attack on a learning disc can be found there. To quote the minimap:
 
@@ -127,7 +127,7 @@ So maps now have a different weather then others, that effect the effectiveness 
 Due to the addition of weather and achievements notifications had to be added, to inform the player of the weather or unlocked achievements.
 I'm especially proud the slide animation of the notifications box, because it was a real hassle to get to work.
 
-![Notification](pokete_1/notification.png)
+![Notification](notification.png)
 
 ### Time
 To further enhance the variety of Poketes [time](https://github.com/lxgr-linux/pokete/pull/123) has been added.
@@ -139,7 +139,7 @@ But Rauphators day and night versions differ, not just that the night version ha
 One ingame hour is the same as a realtime minute, but the time ingame time will stop after idling for two minutes.
 Also a big Ascii clock was added to keep track of time. 
 
-![Clock](pokete_1/clock.png)
+![Clock](clock.png)
 
 ### Leveling
 Because of the fact that leveling is a very lengthy and annoying thing to do, faster ways of doing so had to be added. 
@@ -150,7 +150,7 @@ One way to do so are [treats](https://github.com/lxgr-linux/pokete/pull/122), th
 #### Pokete-Care
 Another way to level faster is to give a Pokete into Pokete-Care, in Pokete-Care a Poketes gets one XP per played ingame hour and can therefore be passively leveled. Only one Pokete at the time can be there.
 
-![Care](pokete_1/care.png)
+![Care](care.png)
 
 ### Appimages
 For all the linuxusers out there an automatic Appimage build has been added to the releases.
