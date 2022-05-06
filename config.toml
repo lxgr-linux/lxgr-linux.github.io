@@ -33,18 +33,18 @@ utterancesIssue = ""
 utterancesLabel = ""
 graphcommentId = ""
 
-  [params.isso]
-  enabled = true
-  data = "https://comments.example.com/"
-  jsLocation = "https://comments.example.com/js/embed.min.js"
-  css = true
-  lang = "de"
-  replyToSelf = true
-  requireAuthor = true
-  requireEmail = true
-  id = "thread-id"
-  avatar = true
-  avatar-bg = "#f0f0f0"
+#  [params.isso]
+#  enabled = true
+#  data = "https://comments.example.com/"
+#  jsLocation = "https://comments.example.com/js/embed.min.js"
+#  css = true
+#  lang = "de"
+#  replyToSelf = true
+#  requireAuthor = true
+#  requireEmail = true
+#  id = "thread-id"
+#  avatar = true
+#  avatar-bg = "#f0f0f0"
 
   [params.webmentions]
   url = "https://yourdomain.com/webemntions/receive"
