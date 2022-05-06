@@ -4,7 +4,7 @@ date: 2022-05-06T13:53:03+02:00
 draft: false
 ---
 
-Soon the next bigger version (0.7.0) of `Pokete` will be released, but what new features will this bring and why the last bigger update has in 2021?
+Soon the next bigger version (0.7.0) of [`Pokete`](https://github.com/lxgr-linux/pokete) will be released, but what new features will this bring?
 This is a more in depth Changelog.
 
 ## Under the hood
@@ -165,4 +165,8 @@ One last thing is the addition of [natures](https://github.com/lxgr-linux/pokete
 |Hasty | 1 | 0.9 | 1.1 |
 |Normal | 1 | 1 | 1 |
 
-This also varies by a grade what's either 1 or 2 and which potentiate the factors with them selves.
+This also varies by a grade what's either 1 or 2 and which potentiate the factors.
+
+## Thanks
+Thanks to everybody who liked my socialmedia posts and stared my github repository.
+But special thanks go to MaFeLP for helping, reviewing the code and being patient with me.
