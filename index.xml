@@ -34,7 +34,7 @@ This is a more in depth Changelog.&lt;/p>
 &lt;/span>
 &lt;/h3>&lt;p>NPCs are now way smarter and are now able to walk to certain areas of the map, regardless is which direction, also &lt;a href="https://github.com/lxgr-linux/pokete/pull/105">multi-answer&lt;/a> chats with NPCs are now passible, so that the player now is able to choose from some answers to give a NPC in a conversation, and depending on this the reactions of the NPCs vary.
 All of the above also enables the addition of a storyline to the game, so that the player may get an antagonist or enemies in later releases.&lt;/p>
-&lt;p>&lt;img src="pokete_1/chitchat.png" alt="ChitChat">&lt;/p>
+&lt;p>&lt;img src="chitchat.png" alt="ChitChat">&lt;/p>
 &lt;h3 id="achievements" >Achievements
 &lt;span>
 &lt;a href="#achievements">
@@ -73,34 +73,34 @@ Copyright (c) lxgr-linux &amp;lt;lxgr-linux@protonmail.com&amp;gt; 2022
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/lxgr-linux/pokete/blob/master/wiki.md#voglus">Voglus&lt;/a>, the evolvement of Voglo.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="pokete_1/voglus.png" alt="Voglus">&lt;/p>
+&lt;p>&lt;img src="voglus.png" alt="Voglus">&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/lxgr-linux/pokete/blob/master/wiki.md#ratatat">Ratatat&lt;/a>, the evolvement of Rato.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="pokete_1/ratatat.png" alt="Ratatat">&lt;/p>
+&lt;p>&lt;img src="ratatat.png" alt="Ratatat">&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/lxgr-linux/pokete/blob/master/wiki.md#crabbat">Crabbat&lt;/a>, which evolves from Clampi and to the also newly added &lt;a href="https://github.com/lxgr-linux/pokete/blob/master/wiki.md#rustacean">Rustacean&lt;/a>, which I added because of my love to the Rust programming language.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="pokete_1/crabbat.png" alt="Crabbat">&lt;/p>
-&lt;p>&lt;img src="pokete_1/rustacean.png" alt="Rustacean">&lt;/p>
+&lt;p>&lt;img src="crabbat.png" alt="Crabbat">&lt;/p>
+&lt;p>&lt;img src="rustacean.png" alt="Rustacean">&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/lxgr-linux/pokete/blob/master/wiki.md#saugh">Saugh&lt;/a>, an overpowered sand ghost that will definitely be nerfed later.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="pokete_1/saugh.png" alt="Saugh">&lt;/p>
+&lt;p>&lt;img src="saugh.png" alt="Saugh">&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/lxgr-linux/pokete/blob/master/wiki.md#corcos-day">Corcos&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="pokete_1/corcos_1.png" alt="Corcos">&lt;/p>
-&lt;p>&lt;img src="pokete_1/corcos_2.png" alt="Corcos">&lt;/p>
+&lt;p>&lt;img src="corcos_1.png" alt="Corcos">&lt;/p>
+&lt;p>&lt;img src="corcos_2.png" alt="Corcos">&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/lxgr-linux/pokete/blob/master/wiki.md#raupathor-day">Raupathor&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="pokete_1/raupathor_1.png" alt="Raupathor">&lt;/p>
-&lt;p>&lt;img src="pokete_1/raupathor_2.png" alt="Raupathor">&lt;/p>
+&lt;p>&lt;img src="raupathor_1.png" alt="Raupathor">&lt;/p>
+&lt;p>&lt;img src="raupathor_2.png" alt="Raupathor">&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/lxgr-linux/pokete/blob/master/wiki.md#mothor">Mothor&lt;/a> (more &lt;a href="#time">info&lt;/a>)&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="pokete_1/mothor.png" alt="Mothor">&lt;/p>
+&lt;p>&lt;img src="mothor.png" alt="Mothor">&lt;/p>
 &lt;h3 id="maps" >Maps
 &lt;span>
 &lt;a href="#maps">
@@ -110,7 +110,7 @@ Copyright (c) lxgr-linux &amp;lt;lxgr-linux@protonmail.com&amp;gt; 2022
 &lt;/h3>&lt;p>Ofcourse one of the highlights of a new release are the new maps. This release just two new maps have been added, but one of which is the most feature rich of them all.
 Also most of the buildings like arenas or Pokete-Center and Shops now have signs on their roofs that show, what those buildings even are.&lt;/p>
 &lt;p>The first new map is &lt;a href="https://github.com/lxgr-linux/pokete/pull/107">sunny beach&lt;/a> where the newly added weather first came into play. It&amp;rsquo;s located in the north of Rockville is the place where the new Crabbat, Rustacean and Saugh can be found.&lt;/p>
-&lt;p>&lt;img src="pokete_1/sunnybeach.png" alt="Sunny beach">&lt;/p>
+&lt;p>&lt;img src="sunnybeach.png" alt="Sunny beach">&lt;/p>
 &lt;p>But the biggest addition is the city of &lt;a href="https://github.com/lxgr-linux/pokete/pull/120">Agrawos&lt;/a> and being the biggest city in the game to far. It features the MowCow-Burger restaurant with a sidequest, the temple of the Wheeto, many NPCs, an arena, a town hall and many items to find. Also a new legendary old attack on a learning disc can be found there. To quote the minimap:&lt;/p>
 &lt;pre tabindex="0">&lt;code>The great city of Agrawos,
 agricultural and cultural
@@ -140,7 +140,7 @@ So maps now have a different weather then others, that effect the effectiveness 
 &lt;/span>
 &lt;/h3>&lt;p>Due to the addition of weather and achievements notifications had to be added, to inform the player of the weather or unlocked achievements.
 I&amp;rsquo;m especially proud the slide animation of the notifications box, because it was a real hassle to get to work.&lt;/p>
-&lt;p>&lt;img src="pokete_1/notification.png" alt="Notification">&lt;/p>
+&lt;p>&lt;img src="notification.png" alt="Notification">&lt;/p>
 &lt;h3 id="time" >Time
 &lt;span>
 &lt;a href="#time">
@@ -153,7 +153,7 @@ And because of this strictly night and day active Poketes are now possible, so t
 But Rauphators day and night versions differ, not just that the night version has some blue accents in its artwork, but that the night has &lt;code>undead&lt;/code> and the day version has &lt;code>plant&lt;/code> as their secondary type. They also evolve to different Poketes, the night Raupathor evolves to Mothor and the day Raupathor to Schmetterling.&lt;/p>
 &lt;p>One ingame hour is the same as a realtime minute, but the time ingame time will stop after idling for two minutes.
 Also a big Ascii clock was added to keep track of time.&lt;/p>
-&lt;p>&lt;img src="pokete_1/clock.png" alt="Clock">&lt;/p>
+&lt;p>&lt;img src="clock.png" alt="Clock">&lt;/p>
 &lt;h3 id="leveling" >Leveling
 &lt;span>
 &lt;a href="#leveling">
@@ -175,7 +175,7 @@ Also a big Ascii clock was added to keep track of time.&lt;/p>
 &lt;/a>
 &lt;/span>
 &lt;/h4>&lt;p>Another way to level faster is to give a Pokete into Pokete-Care, in Pokete-Care a Poketes gets one XP per played ingame hour and can therefore be passively leveled. Only one Pokete at the time can be there.&lt;/p>
-&lt;p>&lt;img src="pokete_1/care.png" alt="Care">&lt;/p>
+&lt;p>&lt;img src="care.png" alt="Care">&lt;/p>
 &lt;h3 id="appimages" >Appimages
 &lt;span>
 &lt;a href="#appimages">
