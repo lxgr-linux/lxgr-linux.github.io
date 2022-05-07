@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lxgrs Blog</title><link>https://lxgr-linux.github.io/</link><description>Lxgrs Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 06 May 2022 13:53:03 +0200</lastBuildDate><atom:link href="https://lxgr-linux.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>The development status of Pokete</title><link>https://lxgr-linux.github.io/posts/pokete_1/</link><pubDate>Fri, 06 May 2022 13:53:03 +0200</pubDate><guid>https://lxgr-linux.github.io/posts/pokete_1/</guid><description>&lt;p>Soon the next bigger version (0.7.0) of &lt;a href="https://github.com/lxgr-linux/pokete">&lt;code>Pokete&lt;/code>&lt;/a> will be released, but what new features will this bring?
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lxgrs Blog</title><link>https://lxgr-linux.github.io/</link><description>Lxgrs Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 07 May 2022 11:32:18 +0200</lastBuildDate><atom:link href="https://lxgr-linux.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Cosmos-sdk docs suck</title><link>https://lxgr-linux.github.io/posts/cosmos_docs_suck/</link><pubDate>Sat, 07 May 2022 11:32:18 +0200</pubDate><guid>https://lxgr-linux.github.io/posts/cosmos_docs_suck/</guid><description>&lt;p>Cosmos-sdk is a great framework for building blockchains for the cosmos ecosystem, but the docs just suck.&lt;/p>
+&lt;h2 id="cosmos-sdk" >Cosmos-sdk
+&lt;span>
+&lt;a href="#cosmos-sdk">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>First of all there ARE rather in depth &lt;a href="https://docs.cosmos.network">docs&lt;/a> for cosmos, but the flaw with those docs is that they describe the inner workings of a certain feature in depth, but don&amp;rsquo;t show how to actually use them.&lt;/p>
+&lt;p>Take the &lt;a href="https://docs.cosmos.network/main/modules/gov">gov&lt;/a> module as an example, in cosmos governance can be used to let the userbase of the chain decide on the future of the chain, for example by changing parameters or adding new code snippets. So it might be very obvious, that programmers might want to introduce custom governance votes for their blockchain, so that they can let the users decide stuff that&amp;rsquo;s not covered by the default proposals already present.&lt;/p>
+&lt;p>This sounds easier then it is and isn&amp;rsquo;t at all documented, the docs just show how governance and the already present proposals work, and that&amp;rsquo;s also very interesting to know, but does not help developing on ones own project.&lt;/p>
+&lt;p>So to actually find out how those things are done reading the actual sourcecode is required, because an API documentation is not present either.&lt;/p>
+&lt;p>This does not just apply to gov but to most other features and modules.&lt;/p>
+&lt;h2 id="finding-the-docs" >Finding the docs
+&lt;span>
+&lt;a href="#finding-the-docs">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>You might think &amp;ldquo;a quick google will find me my docs&amp;rdquo;, but that&amp;rsquo;s wrong, the actual &lt;a href="https://docs.cosmos.network">docs&lt;/a> are not even findable via duck duck go and can only be find by navigating to them via the cosmos-sdk homepage. And also googling &lt;code>Cosmos-sdk proplem XY&lt;/code> does not find anything related to cosmos-sdk but the first then results are related to Cosmos DB from Microsoft.&lt;/p>
+&lt;h2 id="ignite-former-starport" >Ignite (former Starport)
+&lt;span>
+&lt;a href="#ignite-former-starport">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h2>&lt;p>Ignite is a tool that&amp;rsquo;s most often used for building chains with Cosmos and does most of the development work, so that the programmer in most cases just has to add logic to scaffolded feature.&lt;/p>
+&lt;p>Ignites docs are not as bad in it self, but finding them or searching anything related to it definitely is. Back when Ignite was still called Starport most google searched returned stuff related to video games and to the tool itself. You might think after renaming Starport to Ignite this might have gotten better, but no. One might think the new name might tend to be distinguishable from other tech related topics, but no. There are several other tools called Ignite related to programming and specially to JS.
+So picking this name, not only made googling for Cosmos-sdk, but also for JS programmers worse.&lt;/p>
+&lt;p>TL;DR Pick names wisely!&lt;/p></description></item><item><title>The development status of Pokete</title><link>https://lxgr-linux.github.io/posts/pokete_1/</link><pubDate>Fri, 06 May 2022 13:53:03 +0200</pubDate><guid>https://lxgr-linux.github.io/posts/pokete_1/</guid><description>&lt;p>Soon the next bigger version (0.7.0) of &lt;a href="https://github.com/lxgr-linux/pokete">&lt;code>Pokete&lt;/code>&lt;/a> will be released, but what new features will this bring?
 This is a more in depth Changelog.&lt;/p>
 &lt;h2 id="under-the-hood" >Under the hood
 &lt;span>
