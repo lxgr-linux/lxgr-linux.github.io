@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lxgrs Blog</title><link>https://lxgr-linux.github.io/blog/</link><description>Lxgrs Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 06 May 2022 13:53:03 +0200</lastBuildDate><atom:link href="https://lxgr-linux.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://lxgr-linux.github.io/blog/about/</link><pubDate>Sat, 07 May 2022 01:19:53 +0200</pubDate><guid>https://lxgr-linux.github.io/blog/about/</guid><description>&lt;p>A small programmers blog covering everything related to tech and programming.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lxgrs Blog</title><link>https://lxgr-linux.github.io/</link><description>Lxgrs Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 06 May 2022 13:53:03 +0200</lastBuildDate><atom:link href="https://lxgr-linux.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>https://lxgr-linux.github.io/about/</link><pubDate>Sat, 07 May 2022 01:19:53 +0200</pubDate><guid>https://lxgr-linux.github.io/about/</guid><description>&lt;p>A small programmers blog covering everything related to tech and programming.&lt;/p>
 &lt;h2 id="impressum" >Impressum
 &lt;span>
 &lt;a href="#impressum">
@@ -46,7 +46,7 @@ Beim Farenland
 &lt;/span>
 &lt;/h3>&lt;pre tabindex="0">&lt;code>phone: 017657269956
 E-Mail: lxgr@protonmail.com
-&lt;/code>&lt;/pre></description></item><item><title>The development status of Pokete</title><link>https://lxgr-linux.github.io/blog/posts/pokete_1/</link><pubDate>Fri, 06 May 2022 13:53:03 +0200</pubDate><guid>https://lxgr-linux.github.io/blog/posts/pokete_1/</guid><description>&lt;p>Soon the next bigger version (0.7.0) of &lt;a href="https://github.com/lxgr-linux/pokete">&lt;code>Pokete&lt;/code>&lt;/a> will be released, but what new features will this bring?
+&lt;/code>&lt;/pre></description></item><item><title>The development status of Pokete</title><link>https://lxgr-linux.github.io/posts/pokete_1/</link><pubDate>Fri, 06 May 2022 13:53:03 +0200</pubDate><guid>https://lxgr-linux.github.io/posts/pokete_1/</guid><description>&lt;p>Soon the next bigger version (0.7.0) of &lt;a href="https://github.com/lxgr-linux/pokete">&lt;code>Pokete&lt;/code>&lt;/a> will be released, but what new features will this bring?
 This is a more in depth Changelog.&lt;/p>
 &lt;h2 id="under-the-hood" >Under the hood
 &lt;span>
