@@ -3,7 +3,10 @@ title: "About"
 date: 2022-05-07T01:19:53+02:00
 draft: false
 disableComments: true
-disable_feed: true 
+disable_feed: true
+sitemap:
+  changefreq: 'always'
+  priority: 0
 ---
 
 A small programmers blog covering everything related to tech and programming.

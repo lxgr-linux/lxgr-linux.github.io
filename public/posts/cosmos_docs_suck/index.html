@@ -12,15 +12,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer-when-downgrade">
 
-<title>Posts - Lxgrs Blog</title>
+<title>Cosmos-sdk docs suck - Lxgrs Blog</title>
 
-<meta name="description" content="A small programmers blog">
+<meta name="description" content="Cosmos-sdk is a great framework for building blockchains for the cosmos ecosystem, but the docs just suck.
+Cosmos-sdk     First of all there ARE rather in depth docs for cosmos, but the flaw with those docs is that they describe the inner workings of a certain feature in depth, but don&rsquo;t show how to actually use them.
+Take the gov module as an example, in cosmos governance can be used to let the userbase of the chain decide on the future of the chain, for example by changing parameters or adding new code snippets.">
 
 
 
 
 
-<link rel="alternate" type="application/rss+xml" href="https://lxgr-linux.github.io/posts/index.xml" title="Lxgrs Blog" />
 <link rel="icon" type="image/x-icon" href="https://lxgr-linux.github.io/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="https://lxgr-linux.github.io/favicon.png">
 
@@ -87,15 +88,21 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="A small programmers blog" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lxgr-linux.github.io/posts/" />
+<meta property="og:title" content="Cosmos-sdk docs suck" />
+<meta property="og:description" content="Cosmos-sdk is a great framework for building blockchains for the cosmos ecosystem, but the docs just suck.
+Cosmos-sdk     First of all there ARE rather in depth docs for cosmos, but the flaw with those docs is that they describe the inner workings of a certain feature in depth, but don&rsquo;t show how to actually use them.
+Take the gov module as an example, in cosmos governance can be used to let the userbase of the chain decide on the future of the chain, for example by changing parameters or adding new code snippets." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lxgr-linux.github.io/posts/cosmos_docs_suck/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-07T11:32:18+02:00" />
+<meta property="article:modified_time" content="2022-05-07T11:32:18+02:00" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="A small programmers blog"/>
+<meta name="twitter:title" content="Cosmos-sdk docs suck"/>
+<meta name="twitter:description" content="Cosmos-sdk is a great framework for building blockchains for the cosmos ecosystem, but the docs just suck.
+Cosmos-sdk     First of all there ARE rather in depth docs for cosmos, but the flaw with those docs is that they describe the inner workings of a certain feature in depth, but don&rsquo;t show how to actually use them.
+Take the gov module as an example, in cosmos governance can be used to let the userbase of the chain decide on the future of the chain, for example by changing parameters or adding new code snippets."/>
 
 
 
@@ -198,22 +205,49 @@ if (!doNotTrack) {
         </header>
         <main id="main" tabindex="-1"> 
             
-    <div class="index-content">
-        
-    </div>
+    
 
-    <div class="articles h-feed">
-        <h1 class="post-title">Posts</h1>
-        
-        
-            <div class="post-short-list h-entry">
-                <div class="post-header">
-                    <header>
-                        <h2 class="p-name post-title"><a class="u-url" href="/posts/cosmos_docs_suck/">Cosmos-sdk docs suck</a></h2>
-                        
-                    </header>
-                </div>
+    <article class="post h-entry">
+        <div class="post-header">
+            <header>
+                <h1 class="p-name post-title">Cosmos-sdk docs suck</h1>
+
                 
+            </header>
+        </div>
+        <div class="content e-content">
+            <p>Cosmos-sdk is a great framework for building blockchains for the cosmos ecosystem, but the docs just suck.</p>
+<h2 id="cosmos-sdk" >Cosmos-sdk
+<span>
+    <a href="#cosmos-sdk">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>First of all there ARE rather in depth <a href="https://docs.cosmos.network">docs</a> for cosmos, but the flaw with those docs is that they describe the inner workings of a certain feature in depth, but don&rsquo;t show how to actually use them.</p>
+<p>Take the <a href="https://docs.cosmos.network/main/modules/gov">gov</a> module as an example, in cosmos governance can be used to let the userbase of the chain decide on the future of the chain, for example by changing parameters or adding new code snippets. So it might be very obvious, that programmers might want to introduce custom governance votes for their blockchain, so that they can let the users decide stuff that&rsquo;s not covered by the default proposals already present.</p>
+<p>This sounds easier then it is and isn&rsquo;t at all documented, the docs just show how governance and the already present proposals work, and that&rsquo;s also very interesting to know, but does not help developing on ones own project.</p>
+<p>So to actually find out how those things are done reading the actual sourcecode is required, because an API documentation is not present either.</p>
+<p>This does not just apply to gov but to most other features and modules.</p>
+<h2 id="finding-the-docs" >Finding the docs
+<span>
+    <a href="#finding-the-docs">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>You might think &ldquo;a quick google will find me my docs&rdquo;, but that&rsquo;s wrong, the actual <a href="https://docs.cosmos.network">docs</a> are not even findable via duck duck go and can only be find by navigating to them via the cosmos-sdk homepage. And also googling <code>Cosmos-sdk proplem XY</code> does not find anything related to cosmos-sdk but the first then results are related to Cosmos DB from Microsoft.</p>
+<h2 id="ignite-former-starport" >Ignite (former Starport)
+<span>
+    <a href="#ignite-former-starport">
+        <svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+    </a>
+</span>
+</h2><p>Ignite is a tool that&rsquo;s most often used for building chains with Cosmos and does most of the development work, so that the programmer in most cases just has to add logic to scaffolded feature.</p>
+<p>Ignites docs are not as bad in it self, but finding them or searching anything related to it definitely is. Back when Ignite was still called Starport most google searched returned stuff related to video games and to the tool itself. You might think after renaming Starport to Ignite this might have gotten better, but no. One might think the new name might tend to be distinguishable from other tech related topics, but no. There are several other tools called Ignite related to programming and specially to JS.
+So picking this name, not only made googling for Cosmos-sdk, but also for JS programmers worse.</p>
+<p>TL;DR Pick names wisely!</p>
+
+        </div>
+        
 
     
 
@@ -233,39 +267,63 @@ if (!doNotTrack) {
     </div>
 </div>
 
-            </div>
+    </article>
+
+    
         
-            <div class="post-short-list h-entry">
-                <div class="post-header">
-                    <header>
-                        <h2 class="p-name post-title"><a class="u-url" href="/posts/pokete_1/">The development status of Pokete</a></h2>
-                        
-                    </header>
-                </div>
-                
-
-    
-
-
-<div class="post-info">
-    
-        <div class="post-date dt-published">2022-05-06</div>
-    
-
-    <a class="post-hidden-url u-url" href="https://lxgr-linux.github.io/posts/pokete_1/">https://lxgr-linux.github.io/posts/pokete_1/</a>
-    <a href="https://lxgr-linux.github.io" class="p-name p-author post-hidden-author h-card" rel="me">lxgr-linux</a>
-
-
-    <div class="post-taxonomies">
         
+    
+
+    
+        
+    <div class="pagination post-pagination">
+        <div class="left pagination-item disabled">
             
+        </div>
+        <div class="right pagination-item ">
+            
+                <a href="/posts/pokete_1/">The development status of Pokete</a>
+            
+        </div>
     </div>
-</div>
 
-            </div>
+
+
+
+    
+
+    
         
-    </div>
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lxgr-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
+
+
+
+
+
+
+
+
+    
 
         </main>
         

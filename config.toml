@@ -65,3 +65,7 @@ graphcommentId = ""
 [markup.goldmark.renderer]
 unsafe = true
 
+[sitemap]
+  changefreq = 'always'
+  filename = 'sitemap.xml'
+  priority = 1
