@@ -12,18 +12,251 @@
     
     
     <item>
-      <title>Pokete_1</title>
+      <title>The development status of Pokete</title>
       <link>https://lxgr-linux.github.io/blog/posts/pokete_1/</link>
       <pubDate>Fri, 06 May 2022 13:53:03 +0200</pubDate>
       
       <guid>https://lxgr-linux.github.io/blog/posts/pokete_1/</guid>
-      <description>&lt;h2 id=&#34;hello-blabla&#34; &gt;Hello Blabla
+      <description>&lt;p&gt;Soon the next bigger version (0.7.0) of &lt;a href=&#34;https://github.com/lxgr-linux/pokete&#34;&gt;&lt;code&gt;Pokete&lt;/code&gt;&lt;/a&gt; will be released, but what new features will this bring?
+This is a more in depth Changelog.&lt;/p&gt;
+&lt;h2 id=&#34;under-the-hood&#34; &gt;Under the hood
 &lt;span&gt;
-    &lt;a href=&#34;#hello-blabla&#34;&gt;
+    &lt;a href=&#34;#under-the-hood&#34;&gt;
         &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
     &lt;/a&gt;
 &lt;/span&gt;
-&lt;/h2&gt;</description>
+&lt;/h2&gt;&lt;p&gt;At first the biggest changes regard some under the hood stuff, like a restructuring of most of classes and their files. Many classes and functions formerly contained in the main &lt;code&gt;pokete.py&lt;/code&gt; file have been moved to their own files, to better organize most of the code, and therefore singleton objects now can be initialized in their own files, and because of that can be just import by code depending on them, that also removes most of the dependency injection and shrinks function heads.&lt;/p&gt;
+&lt;p&gt;Also the introduction of the &lt;code&gt;PeriodicEventManager&lt;/code&gt; (Pevm) reorganized some code and introduced a centralized approach to handling periodically occurring events on the Playmaps, like grass and water animations, which until now had their own functions managed via &lt;code&gt;extra_actions&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Linting, the improvement of code-quality and documentation has been taken very seriously in this release, to lower the entry barricade to contributing to Pokete. Also logging has been added.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pipenv&lt;/code&gt; now also is supported and enables virtual environments and dependency management.&lt;/p&gt;
+&lt;p&gt;Also some of the escapecodes have been improved.&lt;/p&gt;
+&lt;h2 id=&#34;game-design-and-behaviour&#34; &gt;Game design and behaviour
+&lt;span&gt;
+    &lt;a href=&#34;#game-design-and-behaviour&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Not just under-the-hood things change, but also quite a lot of the game mechanics and design.&lt;/p&gt;
+&lt;h3 id=&#34;walkback&#34; &gt;Walkback
+&lt;span&gt;
+    &lt;a href=&#34;#walkback&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Now the player is forcefully returned to the last Pokete-Center they visited after the death of all their Poketes in their deck, so that cheating through the game by not being attacked by Poketes is now impossible.&lt;/p&gt;
+&lt;p&gt;Also when a Pokete dies in a fight, the fight isn&amp;rsquo;t instantly lost, but the player now is able to choose another Pokete to continue the fight.&lt;/p&gt;
+&lt;h3 id=&#34;npcs&#34; &gt;NPCs
+&lt;span&gt;
+    &lt;a href=&#34;#npcs&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;NPCs are now way smarter and are now able to walk to certain areas of the map, regardless is which direction, also &lt;a href=&#34;https://github.com/lxgr-linux/pokete/pull/105&#34;&gt;multi-answer&lt;/a&gt; chats with NPCs are now passible, so that the player now is able to choose from some answers to give a NPC in a conversation, and depending on this the reactions of the NPCs vary.
+All of the above also enables the addition of a storyline to the game, so that the player may get an antagonist or enemies in later releases.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;chitchat.png&#34; alt=&#34;ChitChat&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;achievements&#34; &gt;Achievements
+&lt;span&gt;
+    &lt;a href=&#34;#achievements&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;A very cool new feature that really enhances the playing experience is the addition of achievements. Now achievements for certain actions, like the first fight or the first caught Pokete, are rewarded with an achievement. Therefore also an achievement overview in the menu has been added.&lt;/p&gt;
+&lt;h3 id=&#34;cli&#34; &gt;Cli
+&lt;span&gt;
+    &lt;a href=&#34;#cli&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Now commandline options, to toggle logging, mods or the input methods have been added.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Pokete Grey Edition v0.6.4
+Usage: ./pokete.py (&amp;lt;options&amp;gt;)
+Options:
+    --log          : Enables logging
+    --help         : Shows this help
+    --no_mods      : Disables mods
+    --force-pynput : Forces the usage of pynput as a keyboard input backend
+
+Homepage: https://github.com/lxgr-linux/pokete
+
+All save and logfiles are located in ~/.cache/pokete/
+Feel free to contribute.
+See README.md for more information.
+This software is licensed under the GPLv3, you should have gotten a
+copy of it alongside this software.
+Copyright (c) lxgr-linux &amp;lt;lxgr-linux@protonmail.com&amp;gt; 2022
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;new-poketes&#34; &gt;New Poketes
+&lt;span&gt;
+    &lt;a href=&#34;#new-poketes&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Newly added Poketes include&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lxgr-linux/pokete/blob/master/wiki.md#voglus&#34;&gt;Voglus&lt;/a&gt;, the evolvement of Voglo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;voglus.png&#34; alt=&#34;Voglus&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lxgr-linux/pokete/blob/master/wiki.md#ratatat&#34;&gt;Ratatat&lt;/a&gt;, the evolvement of Rato.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;ratatat.png&#34; alt=&#34;Ratatat&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lxgr-linux/pokete/blob/master/wiki.md#crabbat&#34;&gt;Crabbat&lt;/a&gt;, which evolves from Clampi and to the also newly added &lt;a href=&#34;https://github.com/lxgr-linux/pokete/blob/master/wiki.md#rustacean&#34;&gt;Rustacean&lt;/a&gt;, which I added because of my love to the Rust programming language.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;crabbat.png&#34; alt=&#34;Crabbat&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rustacean.png&#34; alt=&#34;Rustacean&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lxgr-linux/pokete/blob/master/wiki.md#saugh&#34;&gt;Saugh&lt;/a&gt;, an overpowered sand ghost that will definitely be nerfed later.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;saugh.png&#34; alt=&#34;Saugh&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lxgr-linux/pokete/blob/master/wiki.md#corcos-day&#34;&gt;Corcos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;corcos_1.png&#34; alt=&#34;Corcos&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;corcos_2.png&#34; alt=&#34;Corcos&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lxgr-linux/pokete/blob/master/wiki.md#raupathor-day&#34;&gt;Raupathor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;raupathor_1.png&#34; alt=&#34;Raupathor&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;raupathor_2.png&#34; alt=&#34;Raupathor&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lxgr-linux/pokete/blob/master/wiki.md#mothor&#34;&gt;Mothor&lt;/a&gt; (more &lt;a href=&#34;#time&#34;&gt;info&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;mothor.png&#34; alt=&#34;Mothor&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;maps&#34; &gt;Maps
+&lt;span&gt;
+    &lt;a href=&#34;#maps&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Ofcourse one of the highlights of a new release are the new maps. This release just two new maps have been added, but one of which is the most feature rich of them all.
+Also most of the buildings like arenas or Pokete-Center and Shops now have signs on their roofs that show, what those buildings even are.&lt;/p&gt;
+&lt;p&gt;The first new map is &lt;a href=&#34;https://github.com/lxgr-linux/pokete/pull/107&#34;&gt;sunny beach&lt;/a&gt; where the newly added weather first came into play. It&amp;rsquo;s located in the north of Rockville is the place where the new Crabbat, Rustacean and Saugh can be found.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;sunnybeach.png&#34; alt=&#34;Sunny beach&#34;&gt;&lt;/p&gt;
+&lt;p&gt;But the biggest addition is the city of &lt;a href=&#34;https://github.com/lxgr-linux/pokete/pull/120&#34;&gt;Agrawos&lt;/a&gt; and being the biggest city in the game to far. It features the MowCow-Burger restaurant with a sidequest, the temple of the Wheeto, many NPCs, an arena, a town hall and many items to find. Also a new legendary old attack on a learning disc can be found there. To quote the minimap:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;The great city of Agrawos,  
+agricultural and cultural   
+center of the whole region. 
+It&amp;#39;s famous for its great   
+Pokete-Arena and its master trainer. Check out the      
+MowCow-Burger restaurant,   
+which offers the best,      
+juiciest and most delicious 
+Mowcow-burgers, cut from the
+happiest and most delicious 
+Mowcows anywhere to find!   
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/64218491/162450140-5d69acaa-4288-4830-b144-c94b2f074ce7.png&#34; alt=&#34;Agrawos&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;weather&#34; &gt;Weather
+&lt;span&gt;
+    &lt;a href=&#34;#weather&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;The addition of weather has been made to change the effectivity balance on certain maps around and forces the player to change their play style.
+So maps now have a different weather then others, that effect the effectiveness of some attacks, (rain makes water stronger and fire weaker; sun makes water weaker and fire stronger&amp;hellip;).&lt;/p&gt;
+&lt;h3 id=&#34;notifications&#34; &gt;Notifications
+&lt;span&gt;
+    &lt;a href=&#34;#notifications&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Due to the addition of weather and achievements notifications had to be added, to inform the player of the weather or unlocked achievements.
+I&amp;rsquo;m especially proud the slide animation of the notifications box, because it was a real hassle to get to work.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;notification.png&#34; alt=&#34;Notification&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;time&#34; &gt;Time
+&lt;span&gt;
+    &lt;a href=&#34;#time&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;To further enhance the variety of Poketes &lt;a href=&#34;https://github.com/lxgr-linux/pokete/pull/123&#34;&gt;time&lt;/a&gt; has been added.
+And because of this strictly night and day active Poketes are now possible, so that certain Poketes can just be caught at night, and also evolve to other Poketes then their day counterparts.&lt;/p&gt;
+&lt;p&gt;Because of this a new evolving line was added, starting with Corcos which has identical day and night versions, which both evolve to Raupathor.
+But Rauphators day and night versions differ, not just that the night version has some blue accents in its artwork, but that the night has &lt;code&gt;undead&lt;/code&gt; and the day version has &lt;code&gt;plant&lt;/code&gt; as their secondary type. They also evolve to different Poketes, the night Raupathor evolves to Mothor and the day Raupathor to Schmetterling.&lt;/p&gt;
+&lt;p&gt;One ingame hour is the same as a realtime minute, but the time ingame time will stop after idling for two minutes.
+Also a big Ascii clock was added to keep track of time.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;clock.png&#34; alt=&#34;Clock&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;leveling&#34; &gt;Leveling
+&lt;span&gt;
+    &lt;a href=&#34;#leveling&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;Because of the fact that leveling is a very lengthy and annoying thing to do, faster ways of doing so had to be added.&lt;/p&gt;
+&lt;h4 id=&#34;treats&#34; &gt;Treats
+&lt;span&gt;
+    &lt;a href=&#34;#treats&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;One way to do so are &lt;a href=&#34;https://github.com/lxgr-linux/pokete/pull/122&#34;&gt;treats&lt;/a&gt;, that can be found in Poketeballs and can be received from NPCs. One notable NPC is the candyman, who will try to gift you a treat every 24 ingame hours. After getting them, treats can be used to instantly level up a Pokete by one level.&lt;/p&gt;
+&lt;h4 id=&#34;pokete-care&#34; &gt;Pokete-Care
+&lt;span&gt;
+    &lt;a href=&#34;#pokete-care&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h4&gt;&lt;p&gt;Another way to level faster is to give a Pokete into Pokete-Care, in Pokete-Care a Poketes gets one XP per played ingame hour and can therefore be passively leveled. Only one Pokete at the time can be there.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;care.png&#34; alt=&#34;Care&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;appimages&#34; &gt;Appimages
+&lt;span&gt;
+    &lt;a href=&#34;#appimages&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;For all the linuxusers out there an automatic Appimage build has been added to the releases.&lt;/p&gt;
+&lt;h3 id=&#34;natures&#34; &gt;Natures
+&lt;span&gt;
+    &lt;a href=&#34;#natures&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;&lt;p&gt;One last thing is the addition of &lt;a href=&#34;https://github.com/lxgr-linux/pokete/pull/125&#34;&gt;natures&lt;/a&gt;, which manipulate the effectiveness of certain Poketes not on the race or level, but more on an individual level. The three natures effect attack defense and initiative values by a factor:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Nature&lt;/th&gt;
+&lt;th&gt;Attack&lt;/th&gt;
+&lt;th&gt;Defense&lt;/th&gt;
+&lt;th&gt;Initiative&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Brave&lt;/td&gt;
+&lt;td&gt;1.1&lt;/td&gt;
+&lt;td&gt;0.9&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Relaxed&lt;/td&gt;
+&lt;td&gt;0.9&lt;/td&gt;
+&lt;td&gt;1.1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hasty&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0.9&lt;/td&gt;
+&lt;td&gt;1.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Normal&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This also varies by a grade what&amp;rsquo;s either 1 or 2 and which potentiate the factors.&lt;/p&gt;
+&lt;h2 id=&#34;thanks&#34; &gt;Thanks
+&lt;span&gt;
+    &lt;a href=&#34;#thanks&#34;&gt;
+        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;&lt;p&gt;Thanks to everybody who liked my socialmedia posts and stared my github repository.
+But special thanks go to MaFeLP for helping, reviewing the code and being patient with me.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
