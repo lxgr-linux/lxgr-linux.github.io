@@ -4,7 +4,7 @@ title = 'Lxgrs Blog'
 theme = 'anubis'
 paginate = 10
 disqusShortname = "lxgr-blog"
-googleAnalytics = "G-12345"
+googleAnalytics = "G-7QPZS1F5P6"
 enableRobotsTXT = true
 
 [[menu.main]]
