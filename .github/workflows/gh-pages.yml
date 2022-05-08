@@ -30,3 +30,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+
+      - name: Indexing
+        run: go run ./send_index.go  $(cat ./public/sitemap.xml | egrep "<loc>" | sed s/"<loc>"//g | sed s/"<\/loc>"//g)
