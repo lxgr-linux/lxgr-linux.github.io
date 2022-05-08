@@ -22,7 +22,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -32,6 +32,4 @@ jobs:
           publish_dir: ./public
 
       - name: Indexing
-        run: |
-          cat ./public/sitemap.xml | egrep "<loc>" | sed s/"<loc>"//g | sed s/"<\/loc>"//g
-          go run ./send_index.go  $(cat ./public/sitemap.xml | egrep "<loc>" | sed s/"<loc>"//g | sed s/"<\/loc>"//g)
+        run: go run ./send_index.go  $(cat ./public/sitemap.xml | egrep "<loc>" | sed s/"<loc>"//g | sed s/"<\/loc>"//g)
