@@ -3,4 +3,4 @@
 	url = https://github.com/guangmean/Niello.git
 [submodule "themes/anubis"]
 	path = themes/anubis
-	url = https://github.com/mitrichius/hugo-theme-anubis.git
+	url = https://github.com/lxgr-linux/hugo-theme-anubis
