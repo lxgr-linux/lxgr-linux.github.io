@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Lxgrs Blog</title>
+    <title>Posts on Lxgrs Blog - A small programmers blog</title>
     <link>https://lxgr-linux.github.io/posts/</link>
-    <description>Lxgrs Blog (Posts)</description>
+    <description>Lxgrs Blog - A small programmers blog (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 May 2022 11:32:18 +0200</lastBuildDate>
