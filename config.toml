@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Lxgrs Blog'
 theme = 'anubis'
 paginate = 10
+description = "A small porgrammers blog"
 disqusShortname = "lxgr-blog"
 googleAnalytics = "G-7QPZS1F5P6"
 enableRobotsTXT = true
